@@ -4,55 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixel Arcade - Press Kit</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            padding-top: 1vh; /* Reduced white space at the top */
+            margin-bottom: 40px;
+        }
+
+        header img {
+            width: 400px; /* Increased logo size */
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .platform-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .platform-links img {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .platform-links img:hover {
+            transform: scale(1.05);
+        }
+
+        .media-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto 40px;
+        }
+
+        .media-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.2);
+        }
+
+        .download-btn {
+            background-color: #fff;
+            color: #000;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 700;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #ccc;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Pixel Arcade - Press Kit</h1>
-    </header>
+<header>
+    <img src="media/gamelogo.png" alt="Pixel Arcade Logo">
+    <p>Portal into neon cyberspace in Pixel Arcade®. Defy gravity, optimize your strategy, and vault through adrenaline-packed levels. Achieve global dominance in the leaderboard to become a VR champion in the ultimate test of precision and agility.</p>
+</header>
 
-    <main>
+<section>
+    <div class="platform-links">
+        <a href="https://store.steampowered.com/app/2603560">
+            <img src="media/steam.png" alt="Steam">
+        </a>
+        <a href="https://www.meta.com/en-gb/experiences/pixel-arcade/8730835970332007/">
+            <img src="media/quest.PNG" alt="Meta Quest">
+        </a>
+        <a href="https://store.steampowered.com/app/2603560">
+            <img src="media/PSVR2.png" alt="PlayStation VR2">
+        </a>
+    </div>
+</section>
 
-        <section class="trailer">
-            <h2>Game Trailer</h2>
-            <!-- Embed your YouTube or Steam trailer -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/1AfqF6sCWgM" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-        </section>
-<iframe src="https://store.steampowered.com/widget/2603560/" frameborder="0" width="646" height="190"></iframe>
-        <section class="media">
-            <h2>Game Media</h2>
-            <div class="media-content">
-                <!-- Four images -->
-                <img src="media/screen_1.png" alt="Screenshot 1">
-                <img src="media/screen_2.png" alt="Screenshot 2">
-                <img src="media/screen_3.png" alt="Screenshot 3">
-                <img src="media/screen_4.png" alt="Screenshot 4">
+<section class="media">
+    <div class="media-content">
+        <img src="media/screen_1.png" alt="Screenshot 1">
+        <img src="media/screen_2.png" alt="Screenshot 2">
+        <img src="media/screen_3.png" alt="Screenshot 3">
+        <img src="media/screen_4.png" alt="Screenshot 4">
+        <img src="media/screenshot_2.png" alt="Screenshot 5">
+        <img src="media/screenshot_3.png" alt="Screenshot 6">
+        <img src="media/logo.png" alt="Logo">
+        <img src="media/square.png" alt="Square Artwork">
+        <img src="media/pa_gif_2.gif" alt="Gameplay GIF">
+    </div>
+</section>
 
-                <!-- Embedded GIFs -->
-                <img src="media/pa_gif_1.gif" alt="Gameplay GIF 1">
-                <img src="media/pa_gif_2.gif" alt="Gameplay GIF 2">
+<section>
+    <a href="media/PA_PressKit.zip" class="download-btn">Download Press Kit</a>
+</section>
 
-                <!-- Embedded Videos -->
-                <video width="400" controls>
-                    <source src="media/clip_1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </section>
-
-        <section class="download">
-            <h2>Download Press Kit</h2>
-            <a href="media/PA_PressKit.zip" class="download-btn">Download ZIP</a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Pixel Arcade</p>
-    </footer>
+<footer>
+    <p>&copy; 2024 Pixel Arcade</p>
+</footer>
 
 </body>
 </html>

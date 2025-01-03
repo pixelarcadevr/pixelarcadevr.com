@@ -12,8 +12,8 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # Custom 404 Error Page (optional)
 ErrorDocument 404 /404.html
 
-# Press page redirection (optional if you're using press.html)
-RewriteRule ^press$ /press.html [L]
+# Press page redirection
+RewriteRule ^press$ press.html [L]
 
 # Caching for static content
 <IfModule mod_expires.c>
